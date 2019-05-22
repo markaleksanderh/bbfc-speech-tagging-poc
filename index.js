@@ -9,10 +9,6 @@ recognition.onresult = (event) => {
 
 }
 
-
-// recognition.start
-
-
 document.addEventListener('keyup', function (event) {
     if (event.defaultPrevented) {
         return
@@ -21,30 +17,19 @@ document.addEventListener('keyup', function (event) {
     if (key === 'i') {
         recognition.start()
         console.log("Listening")
-        
+        console.log("Press `escape` to stop")      
+    }
+    if (key === 'Escape' || key == 'Esc' || key === 27) {
+        console.log("Stop")
+        recognition.stop()
     }
 })
 
-
-
-
-
-// const icon = document.querySelector('p.microphone')
-
-
-// icon.addEventListener('click', ()=> {
-//     console.log("Listening")
-//     dictate()
-// })
-
-// const dictate = () => {
-//     recognition.start()
-//     // document.querySelector('p.microphone').textContent = "Listening"
-
-//     recognition.onresult = (event) => {
-//         const speechToText = event.results[0][0].transcript
-//         document.querySelector('.text-box').textContent = speechToText
-//         // document.querySelector('p.microphone').textContent = "Start"
-//     }
-// }
-
+recognition.onend = (event) => {
+    if (!event.results) {
+        console.log("No results")
+    }
+    else {
+        console.log(event.results)
+    }
+}
