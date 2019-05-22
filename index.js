@@ -7,7 +7,7 @@ window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecogn
 const recognition = new SpeechRecognition()
 recognition.lang = "en-UK"
 recognition.continuous = true
-recognition.interimResults = true
+// recognition.interimResults = true
 recognition.onresult = (event) => {
     console.log("Result: ", event.results[event.results.length - 1][0].transcript)
 
@@ -23,7 +23,7 @@ document.addEventListener('keyup', function (event) {
         console.log("Listening")
         console.log("Press `escape` to stop")      
     }
-    if (key === 'Escape' || key == 'Esc' || key === 27) {
+    if (key === 'o') {
         console.log("Stop")
         recognition.stop()
     }
