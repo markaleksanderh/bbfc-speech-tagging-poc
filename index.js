@@ -3,32 +3,24 @@ console.log(tags)
 
 window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition
 
-// var words = []
-
 const recognition = new SpeechRecognition()
 recognition.lang = "en-UK"
 recognition.continuous = true
 // recognition.interimResults = true
 recognition.onresult = (event) => {
-    // console.log(event.results[event.results.length - 1][0].transcript)
-    // event.results[event.results.length - 1][0].transcript.split().forEach(function(el) {
-    //     console.log(el)
-    // })
-    // console.log(String(event.results[event.results.length - 1][0].transcript).split(" "))
+
     var matches = String(event.results[event.results.length - 1][0].transcript).split(" ")
     matches.forEach(function(match){
-        // console.log(m)
+
         if (tags.includes(match)) {
             var span = document.createElement('span')
             span.textContent = match
-            // document.getElementById('text-area').appendChild(sp)
-            // document.getElementById('text-area').textContent = m
-            // console.log(m)
-            // console.log(span)
+            console.log(match)
+            console.log(span)
             document.getElementById('text-area').appendChild(span)
         }
     })
-    // words.push(event.results[event.results.length - 1][0].transcript.split())
+
 
 }
 
@@ -43,7 +35,6 @@ document.addEventListener('keyup', function (event) {
     }
     if (key === 'o') {
         console.log("Stop")
-        // console.log(event.results)
         recognition.stop()
     }
 })

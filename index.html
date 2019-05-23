@@ -7,12 +7,15 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="container h-100">
-            <div class="row h-100 justify-content-center align-items-center">
+        <div class="container">
+                <div class="row justify-content-center align-items-center">
 
                 <div class="col">
-                    <p class="instruction">Press `i` key to begin recording.</p>
-                    <p class="instruction">Press `o` to stop.</p>
+                    <h3>Markers</h3>
+                    <div class="marker-panel">
+
+                    </div>
+
                     <p id="text-area">
 
                     </p>
@@ -20,7 +23,19 @@
                 </div>
             </div>
             
+
+            <!-- <div class="fixed-bottom">
+                    <p class="instruction">Press `i` key to begin recording.</p>
+                    <p class="instruction">Press `o` to stop.</p>
+            </div> -->
+
         </div>
+        <footer class="footer mt-auto py-3 fixed-bottom"">
+            <div class="container">
+                    <p class="instruction">Press `i` key to begin recording.</p>
+                    <p class="instruction">Press `o` to stop.</p>
+            </div>
+        </footer>
         <script src="index.js"></script>
     </body>
 </html>
