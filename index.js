@@ -14,7 +14,20 @@ recognition.onresult = (event) => {
     // event.results[event.results.length - 1][0].transcript.split().forEach(function(el) {
     //     console.log(el)
     // })
-    console.log(String(event.results[event.results.length - 1][0].transcript).split(" "))
+    // console.log(String(event.results[event.results.length - 1][0].transcript).split(" "))
+    var matches = String(event.results[event.results.length - 1][0].transcript).split(" ")
+    matches.forEach(function(m){
+        // console.log(m)
+        if (tags.includes(m)) {
+            var span = document.createElement('span')
+            span.textContent = m
+            // document.getElementById('text-area').appendChild(sp)
+            // document.getElementById('text-area').textContent = m
+            // console.log(m)
+            // console.log(span)
+            document.getElementById('text-area').appendChild(span)
+        }
+    })
     // words.push(event.results[event.results.length - 1][0].transcript.split())
 
 }
