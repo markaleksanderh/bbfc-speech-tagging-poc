@@ -7,19 +7,26 @@ html, body {
     font-family: 'Montserrat', sans-serif;
 }
 
+#text-area {
+    width: 200px;
+    display: block;
+}
 
 h3 {
     color: #fff;
     font-weight: 600;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #text-area span {
-    padding: 5px;
-    margin: 5px;
+    padding: 8px 15px;
+    margin: 7px;
     background-color: #e1e1e2;
     color: #000000;
     border-radius: 20px;
+    font-size: 25px;
+
 }
 
 .instruction {

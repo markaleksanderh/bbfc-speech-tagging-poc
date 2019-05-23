@@ -18,6 +18,7 @@ recognition.onresult = (event) => {
             console.log(match)
             console.log(span)
             document.getElementById('text-area').appendChild(span)
+
         }
     })
 
