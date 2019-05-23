@@ -15,8 +15,8 @@ recognition.onresult = (event) => {
         if (tags.includes(match)) {
             var span = document.createElement('span')
             span.textContent = match
-            console.log(match)
-            console.log(span)
+            // console.log(match)
+            // console.log(span)
             document.getElementById('text-area').appendChild(span)
 
         }
