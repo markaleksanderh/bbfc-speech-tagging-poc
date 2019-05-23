@@ -16,11 +16,11 @@ recognition.onresult = (event) => {
     // })
     // console.log(String(event.results[event.results.length - 1][0].transcript).split(" "))
     var matches = String(event.results[event.results.length - 1][0].transcript).split(" ")
-    matches.forEach(function(m){
+    matches.forEach(function(match){
         // console.log(m)
-        if (tags.includes(m)) {
+        if (tags.includes(match)) {
             var span = document.createElement('span')
-            span.textContent = m
+            span.textContent = match
             // document.getElementById('text-area').appendChild(sp)
             // document.getElementById('text-area').textContent = m
             // console.log(m)

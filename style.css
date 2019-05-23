@@ -1,3 +1,20 @@
 html, body {
     height: 100%;
+    background-color: #000000;
+}
+
+#text-area {
+    background-color: #1f1f1f;
+}
+
+#text-area span {
+    padding: 5px;
+    margin: 5px;
+    background-color: #6a6a6a;
+    color: #000000;
+    border-radius: 20px;
+}
+
+.instruction {
+    color: #fff;
 }
